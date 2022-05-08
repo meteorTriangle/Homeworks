@@ -1,0 +1,42 @@
+.program QuadratureDecoder
+
+.origin 0
+    ; 16 element jump table based on 4-bit encoder last state and current state.
+    jmp delta0      ; 00-00
+    jmp minus1      ; 00-01
+    jmp plus1       ; 00-10
+    jmp delta0      ; 00-11
+    jmp plus1       ; 01-00
+    jmp delta0      ; 01-01
+    jmp delta0      ; 01-10
+    jmp minus1      ; 01-11
+    jmp minus1      ; 10-00
+    jmp delta0      ; 10-01
+    jmp delta0      ; 10-10
+    jmp plus1       ; 10-11
+    jmp delta0      ; 11-00
+    jmp plus1       ; 11-01
+    jmp minus1      ; 11-10
+    jmp delta0      ; 11-11
+
+; Program actually starts here.
+.wrap_target
+delta0:
+public start:
+    mov isr, null       ; Make sure that the input shift register is cleared when table jumps to delta0.
+    in y, 2             ; Upper 2-bits of address are formed from previous encoder pin readings
+    mov y, pins         ; Lower 2-bits of address are formed from current encoder pin readings. Save in Y as well.
+    in y, 2
+    mov pc, isr         ; Jump into jump table which will then jump to delta0, minus1, or plus1 labels.
+minus1:
+    jmp x-- output      ; Decrement x
+    jmp output
+plus1:
+    mov x, ~x           ; Increment x by calculating x=~(~x - 1)
+    jmp x-- next2
+next2:
+    mov x, ~x
+output:
+    mov isr, x          ; Push out updated counter.
+    push noblock
+.wrap
