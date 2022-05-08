@@ -51,7 +51,7 @@ float:right;
     1. #### 說明  
         使用這兩種測器測出來的值計算出三個軸所受到的重力加速度，來保持機器人的平衡。
     2. #### 原理 
-        {%youtube eqZgxR6eRjo %}
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/eqZgxR6eRjo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     3. #### 感測器實體圖
         <img src="https://img.ruten.com.tw/s1/2/37/57/21822102540119_869.jpg" width=150>
     4. #### 其他使用方法
