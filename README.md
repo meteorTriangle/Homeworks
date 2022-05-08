@@ -29,4 +29,4 @@ updated: 2022-05-08
     1. #### 說明  
         利用反射超音波計算發射和接收的時間差來算出和目標物之間的距離
     2. #### 感測器實體圖
-        <img src="https://www.mouser.tw/images/marketingid/2019/img/177109536.png?v=031022.1026" width=300>
+        <img src="https://www.mouser.tw/images/marketingid/2019/img/177109536.png" width=300>
