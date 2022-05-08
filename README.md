@@ -18,14 +18,22 @@ updated: 2022-05-08
     
     2. #### 感測器實體圖:
         <img src="http://img.alicdn.com/imgextra/i3/1028072184/O1CN012kkgdQ1S0Jbdvh27D_!!1028072184.jpg" width=150> 
+    3. #### 其他使用方法
+        - 作為賽車遊戲方向盤的角度感測器。
+        - 用來偵測遙控車的轉向馬達位置，避免馬達燒壞。
 - ### 陀螺儀+線性加速度感測器
     1. #### 說明  
         {%youtube eqZgxR6eRjo %}  
+        使用這個感測器感測到的旋轉加速度，和線性加速度，計算出重力加速度。
     2. #### 感測器實體圖
         <img src="https://img.ruten.com.tw/s1/2/37/57/21822102540119_869.jpg" width=150>
-        
+    3. #### 其他使用方法
+        - 作為遙控飛機的姿態感測。
 - ### 超音波距離感測器
     1. #### 說明  
         利用反射超音波計算發射和接收的時間差來算出和目標物之間的距離
     2. #### 感測器實體圖
-        <img src="https://cf.shopee.tw/file/a0a1b2ac8bcb24f41030ef6a51f08faa" width=300>
+        <img src="https://cf.shopee.tw/file/a0a1b2ac8bcb24f41030ef6a51f08faa" width=150>
+    3. #### 其他使用方法
+        - 作為升降機構的高度感測器
+        
